@@ -1,16 +1,18 @@
-import java.util.Collection;
-import java.util.Objects;
+import java.util.*;
 
 public class Department {
 
     private Library library;
     private String name;
-    private Collection<Book> books;
-    private Collection<CD> CDs;
-    private Collection<DVD> DVDs;
+    private Set<Book> books;
+    private Set<CD> CDs;
+    private Set<DVD> DVDs;
 
     public Department(String name) {
         this.name = name;
+        this.books = new HashSet<Book>();
+        this.CDs = new HashSet<CD>();
+        this.DVDs = new HashSet<DVD>();
     }
 
     void addBook(Book book){

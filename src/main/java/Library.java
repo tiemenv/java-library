@@ -1,22 +1,18 @@
-import java.util.Collection;
-import java.util.Objects;
+import java.util.*;
 
 public class Library {
 
     private String name;
     private String address;
-    private Collection<Department> departments;
+    private Set<Department> departments;
 
     public Library(String name, String address) {
         this.name = name;
         this.address = address;
+        this.departments = new HashSet<Department>();
     }
 
     void addDepartment(Department department){
-        departments.add(department);
-    }
-
-    void removeDepartment(Department department){
         departments.add(department);
     }
 
